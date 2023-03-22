@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>新浪导航案例-padding影响盒子的好处</title>
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Custom Theme files -->
+		<!--theme-style-->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<!--//theme-style-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Acrostia Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!--fonts-->
+		<link href='http://fonts.useso.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+		<!--//fonts-->
+
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			$(function() {
+				$("#slider").responsiveSlides({
+					auto: true,
+					nav: true,
+					speed: 500,
+					namespace: "callbacks",
+					pager: true,
+				});
+			});
+		</script>
+		<!---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop: $(this.hash).offset().top
+					}, 1000);
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<!--header -->
+		<!-- banner -->
+		<div class="banner" id="home">
+			<div class="slider">
+				<div class="callbacks_container">
+					<ul class="rslides" id="slider">
+						<li>
+							<img src="images/lol1.jpg" alt="">
+							<div class="banner-matter">
+								<img class="img-responsive" src="images/good1.png" alt=" " />
+
+							</div>
+						</li>
+						<li>
+							<img src="images/lol2.jpg" alt="">
+							<div class="banner-matter">
+								<img class="img-responsive" src="images/good1.png" alt=" " />
+
+							</div>
+						</li>
+						<li>
+							<img src="images/lol3.jpg" alt="">
+							<div class="banner-matter">
+								<img class="img-responsive" src="images/good1.png" alt=" " />
+
+							</div>
+						</li>
+						<li>
+							<img src="images/lol4.jpg" alt="">
+							<div class="banner-matter">
+								<img class="img-responsive" src="images/good1.png" alt=" " />
+
+							</div>
+						</li>
+						<li>
+							<img src="images/lol5.jpg" alt="">
+							<div class="banner-matter">
+								<img class="img-responsive" src="images/good1.png" alt=" " />
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!---->
+		<div class="header">
+			<div class="container">
+				<div class="fixed-header">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo2.png" alt=" " /></a>
+					</div>
+					<div class="top-nav cssmenu">
+						<nav class="nav clearfix">
+							<a id="menu-toggle" class="anchor-link"><img src="images/menu.png" alt="" /></a>
+							<ul class="simple-toggle" id="nav">
+								<li class="current"><a href="#home" class="scroll">主页</a></li>
+								<li><a href="#services" class="scroll"> 背景</a></li>
+								<li><a href="#about" class="scroll">召唤师</a></li>
+								<li><a href="#work" class="scroll">地区</a></li>
+								<li><a href="#contact" class="scroll">建议</a></li>
+							</ul>
+						</nav>
+
+						<script type="text/javascript">
+							$(document).ready(function() {
+
+								$('#menu-toggle').click(function() {
+									$('#nav').toggleClass('open');
+									e.preventDefault();
+								});
+
+							});
+						</script>
+						<!---->
+						<script src="js/jquery.nav.js"></script>
+						<script type="text/javascript">
+							$(document).ready(function() {
+								$('#nav').onePageNav({
+									begin: function() {
+										console.log('start')
+									},
+									end: function() {
+										console.log('stop')
+									}
+								});
+							});
+						</script>
+
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function() {
+				var navoffeset = $(".header").offset().top;
+				$(window).scroll(function() {
+					var scrollpos = $(window).scrollTop();
+					if (scrollpos >= navoffeset) {
+						$(".header").addClass("fixed");
+					} else {
+						$(".header").removeClass("fixed");
+					}
+				});
+
+			});
+		</script>
+		<!-- /script-for sticky-nav -->
+
+		<!--content-->
+		<div class="content">
+			<!---->
+			<div class="services" id="services">
+				<div class="container">
+					<div class="service-head">
+						<h3>背景故事</h3>
+						<span> 在符文之地中，<b>魔法</b>就是一切.</span>
+						<p>这片大陆上的人民自远古以来就习惯结群而斗，
+						用战争解决纷争。而不论何时，战争的工具始终都是魔法。军队用法术和符文武装自己，英
+						雄们打造出大部分魔法物品率领部队彼此厮杀。召唤者，瓦罗然大陆的实际领导者们，他们
+						疯狂使用魔法能量攻击敌人的部队和支持者。他们拥有近乎无限的原始魔法力量使用，从未考
+						虑过无止境的滥用魔法会给这片大陆的环境带来怎么样的灾难</p>
+					</div>
+					<div class=" services-grid">
+						<div class="col-md-4 service-grid">
+							<a href="broken sword1.html"><img class="img-responsive" src="images/s1.png" alt=" " /></a>
+							<h5>断剑的自白Ⅰ</h5>
+							<p>诺克萨斯和艾欧尼亚战后余烬未灭，瑞文正面临一条滔天大罪的指控。</p>
+						</div>
+						<div class="col-md-4 service-grid">
+							<a href="broken sword2.html"><img class="img-responsive" src="images/s1.png" alt=" " /></a>
+							<h5>断剑的自白Ⅱ</h5>
+							<p>锐雯正为亚索村里长老的死受审。新的呈堂证物，一把断剑。</p>
+						</div>
+						<div class="col-md-4 service-grid">
+							<a href="collect.html"><img class="img-responsive" src="images/s3.png" alt=" " /></a>
+							<h5>收魂</h5>
+							<p>锁链划过地面的骇人声响回荡在荒野中。野外，一团非自然形成的迷雾将月亮和星星的光芒掩盖，平日里鸣叫的昆虫现在也变得异常安静。</p>
+						</div>
+						<div class="col-md-4 service-grid ">
+							<a href="sound.html"><img class="img-responsive" src="images/s4.png" alt=" " /></a>
+							<h5>声</h5>
+							<p>符文之地有什么东西苏醒了。他古老悠久、恐怖骇人。这个被称为费德提克的远古恐惧无声无息的行走在凡人社会的边缘，被恐慌气氛所吸引，以猎物的惊骇为食。</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!---->
+			<div class="team" id="about">
+				<div class="container">
+					<div class="team-head">
+						<h3>断剑重铸之日 骑士归来之时</h3>
+						<p>The day the broken sword is reforged, when the knight returns</p>
+						<a href="#" class="meet">峡谷最吊召唤师<span> </span></a>
+					</div>
+					<div class=" team-top">
+						<div class="col-md-4 team-top-grid">
+							<div class="team-grid">
+								<a href="#"><label class="t1"> </label></a>
+								<h6>爷灬傲奈我何</h6>
+								<small>General manager</small>
+								<ul class="social" id="social1">
+									<li class="loble"><span> </span></li>
+									<li class="loble"><span> </span></li>
+									<li class="loble"><span> </span></li>
+									<li class="loble"><span> </span></li>
+									<!-- <li class="facebook"><a href="#"><span> </span> </a></li>
+									<li class="twitter"><a href="#"><span> </span> </a></li>
+									<li class="gmail"><a href="#"><span> </span> </a></li>
+									<li class="inline"><a href="#"><span> </span> </a></li> -->
+								</ul>
+							</div>
+						</div>
+						<div class=" col-md-4 team-top-grid">
+							<div class="team-grid">
+								<a href="#"><label class="t2"> </label></a>
+								<h6>杰个就斯爱情</h6>
+								<small>General manager</small>
+								<ul class="social" id="social2">
+									<li class="facebook"><a href="#"><span> </span> </a></li>
+									<li class="twitter"><a href="#"><span> </span> </a></li>
+									<li class="gmail"><a href="#"><span> </span> </a></li>
+									<li class="inline"><a href="#"><span> </span> </a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 team-top-grid">
+							<div class="team-grid">
+								<a href="#"><label class="t3"> </label></a>
+								<h6>浙江卫视一场屠杀</h6>
+								<small>General manager</small>
+								<ul class="social" id="social3">
+									<li class="facebook"><a href="#"><span> </span> </a></li>
+									<li class="twitter"><a href="#"><span> </span> </a></li>
+									<li class="gmail"><a href="#"><span> </span> </a></li>
+									<li class="inline"><a href="#"><span> </span> </a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 team-top-grid  ">
+							<div class="team-grid">
+								<a href="#"><label class="t4"> </label></a>
+								<h6>我德脚气你莱文</h6>
+								<small>General manager</small>
+								<ul class="social" id="social4">
+									<li class="facebook"><a href="#"><span> </span> </a></li>
+									<li class="twitter"><a href="#"><span> </span> </a></li>
+									<li class="gmail"><a href="#"><span> </span> </a></li>
+									<li class="inline"><a href="#"><span> </span> </a></li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!---->
+			<div class="work" id="work">
+				<div class="container">
+					<div class="work-head">
+						<h3>亮点地区</h3>
+						<p>他们对自己跋涉而过的世界知之甚少 -- 瑞兹</p>
+					</div>
+					<div class=" work-top">
+						<div class="by-type">
+							<h6>符文大陆</h6>
+						</div>
+						<ul id="filters">
+							<li><span class="filter " data-filter="app card icon web">所有地区</span></li>
+							<li><span class="filter" data-filter="app">西部地区</span></li>
+							<li><span class="filter" data-filter="card"> 中部地区 </span></li>
+							<li><span class="filter" data-filter="icon">东部地区</span></li>
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+					<div id="portfoliolist">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper ">
+								<a href="images/地区1.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区1.jpg" alt="" />
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q1"> </label>
+									</div>
+								</a>
+								<p>弗尔雷卓德</p>
+							</div>
+						</div>
+						<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">
+								<a href="images/地区2.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区2.jpg" alt="" />
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q2"> </label>
+									</div>
+								</a>
+								<p>诺克萨斯</p>
+							</div>
+						</div>
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">
+								<a href="images/地区3.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区3.jpg" alt="" />
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q3"> </label>
+									</div>
+								</a>
+								<p>德玛西亚</p>
+							</div>
+						</div>
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper ">
+								<a href="images/地区4.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区4.jpg" alt="" />
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q4"> </label>
+									</div>
+								</a>
+								<p>皮尔特沃夫</p>
+							</div>
+						</div>
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper ">
+								<a href="images/地区5.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区5.jpg" alt="" />
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q5"> </label>
+									</div>
+								</a>
+								<p>祖安</p>
+							</div>
+						</div>
+						<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">
+								<a href="images/地区6.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区6.jpg" alt="" />
+
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q6"> </label>
+									</div>
+								</a>
+								<p>艾欧尼亚</p>
+							</div>
+						</div>
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">
+								<a href="images/地区7.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区7.jpg" alt="" />
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q7"> </label>
+									</div>
+								</a>
+								<p>比尔吉沃特</p>
+							</div>
+						</div>
+						<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">
+								<a href="images/地区8.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+									<img class="img-responsive" src="images/地区8.jpg" alt="" />
+									<span class="arrow"> </span>
+									<div class="simple">
+										<label class="q8"> </label>
+									</div>
+								</a>
+								<p>暗影岛</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!-- Script for gallery Here -->
+					<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+						$(function() {
+
+							var filterList = {
+
+								init: function() {
+
+									// MixItUp plugin
+									// http://mixitup.io
+									$('#portfoliolist').mixitup({
+										targetSelector: '.portfolio',
+										filterSelector: '.filter',
+										effects: ['fade'],
+										easing: 'snap',
+										// call the hover effect
+										onMixEnd: filterList.hoverEffect()
+									});
+
+								},
+
+								hoverEffect: function() {
+
+									// Simple parallax effect
+									$('#portfoliolist .portfolio').hover(
+										function() {
+											$(this).find('.label').stop().animate({
+												bottom: 0
+											}, 200, 'easeOutQuad');
+											$(this).find('img').stop().animate({
+												top: -30
+											}, 500, 'easeOutQuad');
+										},
+										function() {
+											$(this).find('.label').stop().animate({
+												bottom: -40
+											}, 200, 'easeInQuad');
+											$(this).find('img').stop().animate({
+												top: 0
+											}, 300, 'easeOutQuad');
+										}
+									);
+
+								}
+
+							};
+
+							// Run the show!
+							filterList.init();
+						});
+					</script>
+					<!-- Gallery Script Ends -->
+				</div>
+			</div>
+			<!---->
+			<link rel="stylesheet" href="css/swipebox.css">
+			<script src="js/jquery.swipebox.min.js"></script>
+			<script type="text/javascript">
+				jQuery(function($) {
+					$(".swipebox").swipebox();
+				});
+			</script>
+
+			<!---->
+
+			<!---->
+			<!-- <div class="contact" id="contact">
+				<div class="container">
+					<div class="contact-head">
+						<h3>CONTACT US</h3>
+						<p>Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat
+							rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae
+							justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.</p>
+					</div>
+					<div class="contact-bottom">
+						<div class="col-md-3 sit-contact">
+							<h5>Address</h5>
+							<div class="contact-add">
+								<ul>
+									<li><span>Acrostia</span></li>
+									<li>Sevenoaks Rd</li>
+									<li>Sevenoaks TN14 7HR, UK</li>
+								</ul>
+							</div>
+							<div class="contact-in">
+								<ul class="phone">
+									<li>Phone: <span>+44 555 555 555</span></li>
+									<li>Fax: <span>+44 556 555 555</span></li>
+									<li>E-mail: <a href="mailto:info@example.com">info@acrostia.com </a></li>
+									<li>Skype: <span>Acrostia</span></li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="col-md-3">
+							<div class="map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29266055.398148097!2d133.28132295!3d-26.43907425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b2bfd076787c5df%3A0x538267a1955b1352!2sAustralia!5e0!3m2!1sen!2sin!4v1414839600665"></iframe>
+							</div>
+						</div>
+						<div class="col-md-6 contact-into">
+							<h5>Ask a question</h5>
+							<form>
+								<div class="contact-grid">
+									<div class="col-md-6 contact-us">
+										<input type="text" value="Name" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">
+									</div>
+									<div class="col-md-6 contact-us">
+										<input type="text" value="Email-id" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Email-id';}">
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<textarea cols="77" rows="6" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+								<div class="send ">
+									<input type="submit" value="SEND">
+								</div>
+							</form>
+
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+
+				</div>
+			</div> -->
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<div class="container">
+				<ul class="social-icons">
+					<img src="images/tencentLogo.png" >
+				</ul>
+				<p class="footer-class">COPYRIGHT © 1998 – 2018 TENCENT. ALL RIGHTS RESERVED.<a target="_blank" href="http://h2design.taobao.com/">英雄联盟官网</a></p>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					/*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+					$().UItoTop({
+						easingType: 'easeOutQuart'
+					});
+
+				});
+			</script>
+
+			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+		</div>
+
+	</body>
+
+</html>
